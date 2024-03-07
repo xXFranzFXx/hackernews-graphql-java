@@ -12,10 +12,14 @@ import graphql.servlet.SimpleGraphQLServlet;
 public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
     private static final LinkRepository linkRepository;
+    private static final UserRepository userRepository;
+
 
     static {
-        MongoDatabase mongo = new MongoClient("ac-kdfo2zh-shard-00-02.ltisdlb.mongodb.net:27017").getDatabase("hackernews");
+        MongoDatabase mongo = new MongoClient("mongodb+srv://omnichordplace:lPfF65WNR2bkBq8R@cluster0.ltisdlb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").getDatabase("hackernews");
         linkRepository = new LinkRepository(mongo.getCollection("links"));
+        userRepository = new UserRepository(mongo.getCollection("users"));
+
     }
 
     public GraphQLEndpoint() {
@@ -25,7 +29,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
     private static GraphQLSchema buildSchema() {
         return SchemaParser.newParser()
                 .file("schema.graphqls")
-                .resolvers(new Query(linkRepository), new Mutation(linkRepository))
+                .resolvers(new Query(linkRepository), new Mutation(linkRepository, userRepository))
                 .build()
                 .makeExecutableSchema();
     }
