@@ -1,0 +1,31 @@
+type User {
+    id: ID!
+    name: String!
+    email: String
+    password: String
+}
+
+input AuthData {
+    email: String!
+    password: String!
+}
+
+type Link {
+    id: ID!
+    url: String!
+    description: String!
+}
+
+type Mutation {
+    createUser(name: String!, authProvider: AuthData!): User
+    createLink(url: String!, description: String!): Link
+}
+
+type Query {
+    allLinks: [Link]
+}
+
+schema {
+    mutation: Mutation
+    query: Query
+}
