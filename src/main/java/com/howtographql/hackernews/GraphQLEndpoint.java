@@ -32,7 +32,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
 
 
     static {
-        MongoDatabase mongo = new MongoClient("mongodb+srv://dbUser:2TBbsjoTaZ9GE5ow@cluster0.ltisdlb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").getDatabase("hackernews");
+        MongoDatabase mongo = new MongoClient("mongodb+srv://<user>:<password>/?retryWrites=true&w=majority&appName=Cluster0").getDatabase("hackernews");
         linkRepository = new LinkRepository(mongo.getCollection("links"));
         userRepository = new UserRepository(mongo.getCollection("users"));
     }
