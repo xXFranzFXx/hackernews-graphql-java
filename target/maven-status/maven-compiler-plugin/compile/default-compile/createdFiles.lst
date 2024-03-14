@@ -1,10 +1,12 @@
 com/howtographql/hackernews/SigninResolver.class
-com/howtographql/hackernews/Link.class
 com/howtographql/hackernews/Query.class
 com/howtographql/hackernews/Mutation.class
 com/howtographql/hackernews/AuthData.class
-com/howtographql/hackernews/SigninPayload.class
 com/howtographql/hackernews/UserRepository.class
+com/howtographql/hackernews/LinkResolver.class
+com/howtographql/hackernews/Link.class
+com/howtographql/hackernews/AuthContext.class
+com/howtographql/hackernews/SigninPayload.class
 com/howtographql/hackernews/LinkRepository.class
 com/howtographql/hackernews/User.class
 com/howtographql/hackernews/GraphQLEndpoint.class
