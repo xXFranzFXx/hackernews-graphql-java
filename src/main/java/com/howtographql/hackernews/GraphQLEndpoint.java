@@ -28,9 +28,6 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
     private static final LinkRepository linkRepository;
     private static final UserRepository userRepository;
 
-
-
-
     static {
         MongoDatabase mongo = new MongoClient("mongodb+srv://<user>:<password>/?retryWrites=true&w=majority&appName=Cluster0").getDatabase("hackernews");
         linkRepository = new LinkRepository(mongo.getCollection("links"));
