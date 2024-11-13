@@ -15,7 +15,6 @@ public class Link {
         this.url = url;
         this.description = description;
         this.userId = userId;
-
     }
     public String getId() {
         return id;
