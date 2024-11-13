@@ -16,7 +16,7 @@ type Link {
     description: String!
     postedBy: User
 }
-type SigninPayload {
+type SignInPayload {
     token: String
     user: User
 }
@@ -24,7 +24,7 @@ type SigninPayload {
 type Mutation {
     createUser(name: String!, authProvider: AuthData!): User
     createLink(url: String!, description: String!): Link
-    signinUser(auth: AuthData): SigninPayload
+    signinUser(auth: AuthData): SignInPayload
 }
 
 type Query {
