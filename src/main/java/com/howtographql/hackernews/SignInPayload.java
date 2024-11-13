@@ -1,11 +1,11 @@
 package com.howtographql.hackernews;
 
-public class SigninPayload {
+public class SignInPayload {
 
     private final String token;
     private final User user;
 
-    public SigninPayload(String token, User user) {
+    public SignInPayload(String token, User user) {
         this.token = token;
         this.user = user;
     }
