@@ -7,11 +7,9 @@ public class SignInPayload {
         this.token = token;
         this.user = user;
     }
-
     public String getToken() {
         return token;
     }
-
     public User getUser() {
         return user;
     }
