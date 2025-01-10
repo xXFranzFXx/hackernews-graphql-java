@@ -4,7 +4,6 @@ import com.coxautodev.graphql.tools.GraphQLResolver;
 
 public class LinkResolver implements GraphQLResolver<Link> {
     private final UserRepository userRepository;
-
     public LinkResolver(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
