@@ -1,7 +1,6 @@
 package com.howtographql.hackernews;
 
 public class AuthData {
-
     private String email;
     private String password;
 
