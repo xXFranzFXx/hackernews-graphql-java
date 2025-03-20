@@ -7,7 +7,6 @@ public class LinkResolver implements GraphQLResolver<Link> {
     public LinkResolver(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-
     public User postedBy(Link link) {
         if (link.getUserId() == null) {
             return null;
