@@ -12,7 +12,6 @@ import graphql.servlet.SimpleGraphQLServlet;
 
 import java.util.Optional;
 
-
 @WebServlet(urlPatterns = "/graphql")
 public class GraphQLEndpoint extends SimpleGraphQLServlet {
     @Override
