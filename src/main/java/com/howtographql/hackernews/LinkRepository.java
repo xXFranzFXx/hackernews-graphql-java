@@ -10,7 +10,6 @@ import java.util.List;
 import static com.mongodb.client.model.Filters.eq;
 
 public class LinkRepository {
-
     private final MongoCollection<Document> links;
 
     public LinkRepository(MongoCollection<Document> links) {
